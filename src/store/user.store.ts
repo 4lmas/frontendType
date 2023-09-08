@@ -44,7 +44,8 @@ export const UseUserStore = defineStore("user", {
             try {
                 const data = await delete_user(id);
                 if (data.ok) {
-                    toast.success("Usuario eliminado")
+                    await this.GetAllUser();
+                    toast.success("Usuario eliminado");
                 }
             } catch {
                 toast.error("Error")

@@ -3,11 +3,11 @@
         class="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline">
         Actualizar
     </button>
-    <dialog id="myModal2" class=" bg-red-300 rounded-md w-[65%] h-[80%]">
+    <dialog id="myModal2" class=" bg-sky-100 rounded-md w-[65%] h-[80%]">
         <div class="flex flex-col w-full h-auto">
             <!-- Header -->
-            <div class="flex w-full h-auto justify-center items-center">
-                <div class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
+            <div class="flex w-full h-auto  items-center right-0">
+                <div class="flex w-10/12 h-auto py-3  items-center text-2xl font-bold ml-11">
                     Actualizar usuario
                 </div>
                 <div onclick="document.getElementById('myModal2').close();"
@@ -21,17 +21,17 @@
                 </div>
             </div>
             <div
-                class="flex w-full h-auto py-10 px-2 justify-center items-center bg-gray-200 rounded text-center text-gray-500">
+                class="flex w-full h-auto py-14 px-2 justify-center items-center bg-white-200 rounded text-center text-gray-500">
                 <!-- formulario -->
                 <form class="flex flex-col space-y-4">
                     <div class="mb-4">
-                        <input type="text" id="rolName" name="rolName " placeholder="Nombre"
+                        <Field type="text" id="Name" name="rolName " placeholder="Nombre" for="user"
+                            class="mt-1 p-2 block w-full rounded-md bg-white border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/>
+                        <input type="text" id="lastName" name="rolName" placeholder="Apellido"
                             class="mt-1 p-2 block w-full rounded-md bg-white border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                        <input type="text" id="rolName" name="rolName" placeholder="Apellido"
+                        <input type="text" id="age" name="rolName" placeholder="Edad"
                             class="mt-1 p-2 block w-full rounded-md bg-white border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                        <input type="text" id="rolName" name="rolName" placeholder="Edad"
-                            class="mt-1 p-2 block w-full rounded-md bg-white border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                        <input type="text" id="rolName" name="rolName" placeholder="Genero"
+                        <input type="text" id="genderName" name="rolName" placeholder="Genero"
                             class="mt-1 p-2 block w-full rounded-md bg-white border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         <input type="text" id="rolName" name="rolName" placeholder="Correo"
                             class="mt-1 p-2 block w-full rounded-md bg-white border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">

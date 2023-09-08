@@ -3,22 +3,22 @@
         <body class="font-poppins antialiased z-0 relative  h-full w-full">
             <div id="view" class="  flex flex-row ">
                 <div id="sidebar"
-                    class="bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
+                    class="bg-blue-300 h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
                     x-show="sidenav">
                     <div class="space-y-6 md:space-y-10 mt-10">
                         <div id="profile" class="space-y-3">
                             <img src="../../../public/vite.svg"
                                 alt="Avatar user" class="w-10 md:w-16 rounded-full mx-auto" />
                             <div>
-                                <h2 class="font-medium text-xs md:text-sm text-center text-teal-500">
-                                    Demo
+                                <h2 class="text-xs md:text-sm text-center text-blue-600 font-extrabold">
+                                    Bienvenido
                                 </h2> 
                             </div>
                         </div>
                         <div id="menu" class="flex flex-col space-y-2">
                             
                             <RouterLink to="/rol"
-                                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-sky-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
                                 <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -28,7 +28,7 @@
                                 <span class="">Rol</span>
                             </RouterLink>
                             <RouterLink to="/user"
-                                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-sky-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
                                 <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path

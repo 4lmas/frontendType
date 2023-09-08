@@ -54,6 +54,6 @@ export const delete_rol = async (id:number) => {
                 Authorization: "Bearer" + GetToken()
             },
         },
-    )
+    );
     return data
 }

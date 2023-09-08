@@ -43,7 +43,7 @@ export const delete_user = async (id: number) => {
         API_URL + "/user/" + id,
         {
             headers:{
-                Authorization: "Bearer" + GetToken(),
+                Authorization: "Bearer" + GetToken()
             },
         },
     );

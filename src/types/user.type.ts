@@ -18,6 +18,7 @@ export interface GetUser{
 }
 
 export interface CreateUser{
+    name: string
     lasName: number
     age: number
     gender:string
@@ -25,10 +26,12 @@ export interface CreateUser{
     password: string
     isActive: boolean
     rolId: number
+    // add rol: string
 }
 
 export interface UpdateUser{
     id: number
+    name: string
     lasName: number
     age: number
     email: string

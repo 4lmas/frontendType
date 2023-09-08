@@ -1,17 +1,17 @@
-<template>
+ <template>
   <create></create>
   <div class="col-span-12 z-30 absolute w-[81.5%] h-[calc(100% - 20%)] top-[20%] left-[18.5%] flex  justify-center">
     <div class="overflow-auto lg:overflow-visible">
-      <table class="table text-gray-400 border-separate space-y-6 text-sm">
-        <thead class="bg-gray-800 text-gray-500">
+      <table class="table text-white border-separate space-y-6 text-sm">
+        <thead class="bg-blue-500 text-white">
           <tr>
-            <th class="p-3">Nombre</th>
+            <th class="p-4">Nombre</th>
             <th class="p-3">Rol Activo</th>
-            <th class="p-3 text-left">Acciones</th>
+            <th class="p-3 rigth-0">Acciones</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="roles in rol" class="bg-gray-800">
+          <tr v-for="roles in rol" class="bg-blue-400">
             <td class="p-3">
               <div class="flex align-items-center">
                 <div class="ml-3">
@@ -22,7 +22,7 @@
             <td class="p-3">
               <div class="flex align-items-center">
                 <div class="ml-3">
-                  <span class="text-green-500">Sí</span>
+                  <span class="">Sí</span>
                 </div>
               </div>
             </td>

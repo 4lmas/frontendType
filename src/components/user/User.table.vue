@@ -21,12 +21,12 @@
                         <td class="p-3">{{ users.age }}</td>
                         <td class="p-3">{{users.gender  }}</td>
                         <td class="p-3">{{ users.email }}</td>
-                        <td class="p-3">{{ users.rol }}</td>
+                        <td class="p-3">{{ users.rol ? users.rol.rol : ''}}</td>
                         <td class="p-3 text-white-500  right-10">Sí</td>
                         <td class="p-3">
                             <!-- modal -->
-                            <updateuser :user="users.name" :id="users.id">
-                            </updateuser>
+                            
+                            <updateuser :user="users"></updateuser>                            
                             <button type="button" class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
                                     @click="handleDelete(users.id)" data-swal-template="#my-template">
                                 Eliminar

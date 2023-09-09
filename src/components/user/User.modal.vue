@@ -127,7 +127,7 @@ const onSubmit = handleSubmit( async(values) => {
 
 <style lang="scss" scoped>
 dialog[open] {
-  animation: appear 0.15s cubic-bezier(0, 1.8, 1, 1.8);
+    animation: appear 0.3s cubic-bezier(0.5, 0, 0, 0);
 }
 
 dialog::backdrop {

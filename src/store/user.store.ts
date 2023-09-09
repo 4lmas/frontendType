@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { get_user, create_user, update_user, delete_user } from "../services/user.service";
+import { get_user, create_user, update_user, delete_user, get_paginated_users } from "../services/user.service";
 import { CreateUser, GetUser, UpdateUser } from "../types/user.type";
 import { useToast } from "vue-toastification";
 
@@ -63,7 +63,22 @@ export const UseUserStore = defineStore("user", {
             } catch (error) {
                 toast.error("Error en el servidor")
             }
+        },
+
+        async GetPaginUser(page: number, take: number) {
+            try {
+                const data = await get_paginated_users(page, take);
+                this.user = data.users;
+                this.paginates = {
+                    total: data.total,
+                    totalPages: data.totalPages,
+                    nextPag: data.nextPag,
+                    prevPag: data.prevPag,
+                    currentPage: page,
+                }
+            } catch (e) {
+                toast.error("Error de servidor: " + e)
+            };
         }
     }
-    
-})
+});

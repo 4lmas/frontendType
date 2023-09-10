@@ -1,4 +1,4 @@
- <template>
+<template>
   <create></create>
   <div class="col-span-12 z-30 absolute w-[81.5%] h-[calc(100% - 20%)] top-[20%] left-[18.5%] flex  justify-center">
     <div class="overflow-auto lg:overflow-visible">

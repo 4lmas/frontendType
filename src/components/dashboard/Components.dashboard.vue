@@ -37,15 +37,22 @@
                                 </svg>
                                 <span class="">Usuario</span>
                             </RouterLink>
+                            <button @click="logout" class="text-sm font-bold text-black py-2 px-2 hover:bg-red-600 hover:text-white hover:scale-105  rounded-md transition duration-150 ease-in-out">
+                                Cerrar sesion
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </body>
-    
 </template>
 
 <script lang="ts" setup>
+import { log_out } from '../../services/auth.service';
+
+const logout = () => {
+    log_out();
+} 
 
 </script>
 

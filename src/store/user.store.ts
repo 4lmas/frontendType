@@ -65,7 +65,7 @@ export const UseUserStore = defineStore("user", {
             }
         },
 
-        async GetPaginUser(page: number, take: number) {
+        async GetUsersPaginated(page: number, take: number) {
             try {
                 const data = await get_paginated_users(page, take);
                 this.user = data.users;

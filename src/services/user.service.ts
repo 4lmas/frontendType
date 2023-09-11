@@ -51,11 +51,12 @@ export const delete_user = async (id: number) => {
 }
 
 export const get_paginated_users = async (page: number, take: number) => {
-    const { data } = await axios.get<PaginationUser>(API_URL + "/user/pagination?page="+page+'&take='+take,
-    {
-        headers: {
-            Authorization: "Bearer " + GetToken(),
-        },
+    const { data } = await axios.get<
+     PaginationUser
+    >(API_URL + "/user/pagination?page="+page+'&take='+take , {
+      headers: {
+        Authorization: "Bearer " + GetToken(),
+      },
     });
     return data;
-};
+  };

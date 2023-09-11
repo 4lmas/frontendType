@@ -65,6 +65,7 @@ export const UseUserStore = defineStore("user", {
             }
         },
 
+        //! Pagination
         async GetUsersPaginated(page: number, take: number) {
             try {
                 const data = await get_paginated_users(page, take);
@@ -72,8 +73,8 @@ export const UseUserStore = defineStore("user", {
                 this.paginates = {
                     total: data.total,
                     totalPages: data.totalPages,
-                    nextPag: data.nextPag,
-                    prevPag: data.prevPag,
+                    nextPag: data.nextPage,
+                    prevPag: data.prevPage,
                     currentPage: page,
                 }
             } catch (e) {

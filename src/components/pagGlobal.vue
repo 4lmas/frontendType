@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <ul>
         <li>
             <button @onclick="changePage(prev)"
@@ -49,4 +49,4 @@ const changePage = (page: number | string) => {
     emits("method", page);
 };
 
-</script>
+</script> -->

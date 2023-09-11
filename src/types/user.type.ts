@@ -39,11 +39,12 @@ export interface UpdateUser{
     rolId: number
 }
 
-export interface PaginationUser {
+export interface PaginationUser{
     users: GetUser[];
-    total: number;
-    totalPages: number;
-    nextPag: number;
-    prevPag: number;
+    total:number;
+    totalPages: number
+    nextPage: number;
+    prevPage: number;
     currentPage: number;
+   
 }

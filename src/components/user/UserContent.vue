@@ -38,6 +38,16 @@
             </table>
         </div>
     </div>
+    <div class = "flex justify-center">
+        <pagination :total="paginates.total"
+                    :totalPages="paginates.totalPages"
+                    :pages="pages"
+                    :next="paginates.nextPag"
+                    :prev="paginates.prevPag"
+                    :currentPage="paginates.currentPage"
+                    :totalPag="paginates.totalPages"
+                    @method="ChangePage"></pagination>
+        </div>
 </template>
 
 <script lang="ts" setup>
@@ -46,13 +56,22 @@ import { onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
 import { UseUserStore } from '../../store/user.store';
 import Swal from 'sweetalert2';
+import Pagination from '../global/PaginateUser.vue';
+
+
 
 const { GetAllUser } = UseUserStore();
+const { user, paginates, pages } = storeToRefs(UseUserStore());
 
-const { user } = storeToRefs(UseUserStore())
+const pagination = UseUserStore();
+
+const ChangePage = (page:string | number) => {
+    pagination.GetUsersPaginated(Number(page), 5);
+}
 
 onMounted(async () => {
-    await GetAllUser()
+    pagination.GetUsersPaginated(1,5);
+    await GetAllUser();
 });
 
 const { DeleteUser } = UseUserStore();

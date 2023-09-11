@@ -2,6 +2,7 @@ import { defineStore } from "pinia"
 import { get_user, create_user, update_user, delete_user, get_paginated_users } from "../services/user.service";
 import { CreateUser, GetUser, UpdateUser } from "../types/user.type";
 import { useToast } from "vue-toastification";
+import { paginate } from "../algorithm/paginated"
 
 const toast = useToast();
 export const UseUserStore = defineStore("user", {
@@ -76,7 +77,8 @@ export const UseUserStore = defineStore("user", {
                     nextPag: data.nextPage,
                     prevPag: data.prevPage,
                     currentPage: page,
-                }
+                };
+                this.pages = paginate(page, data.totalPages);
             } catch (e) {
                 toast.error("Error de servidor: " + e)
             };

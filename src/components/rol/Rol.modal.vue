@@ -29,7 +29,7 @@
                       class="flex w-full h-auto py-10 px-2 justify-center items-center bg-white rounded text-center text-gray-500">
                       <!-- formulario -->
                       <form class="flex flex-col space-y-4" @submit="onSubmit">
-                          <div class="mb-4">
+                          <div class="flex flex-col w-full mt-1">
                               <Field type="text" 
                                 name="rol" placeholder="Ingrese el rol"
                                 class="mt-1 p-2 block w-full rounded-md bg-white border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
